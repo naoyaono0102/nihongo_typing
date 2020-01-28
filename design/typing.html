@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/app.css">
+  <title>日本語タイピング</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+</head>
+
+<body>
+  <div class="l-h100vh">
+    <!-- ヘッダー -->
+    <header class="l-header">
+      <div class="p-header l-site-width">
+        <h1 class="p-header__logo">
+          <a class="p-logo" href="index.html">Nihongo Typing</a>
+        </h1>
+
+        <div class="p-header__nav">
+          <nav class="p-nav">
+            <ul class="p-nav__list">
+              <li class="p-list"><a class="p-list__link" href="#">ログイン</a></li>
+              <li class="p-list u-ml--4l"><a class="p-list__link" href="#">新規登録</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div> <!-- p-header -->
+    </header>
+
+    <!-- メイン -->
+    <main class="l-typing l-site-width">
+
+
+      <div class="p-typing">
+
+        <!-- ヘッダー -->
+        <div class="p-typing__header">
+          <sapan class="p-typing__title">MINNANO NIHONGO L1</sapan>  
+          <div class="p-time-limit">30</div>  
+        </div>
+        
+        <!-- 問題 -->
+        <div class="p-typing__question">
+
+          <!-- スタートボタン -->
+          <button class="c-btn p-btn__list l-btn-width--xl u-position--center"  v-on:click="doDrill" v-if="!isStarted">START</button>
+
+          <!-- カウントダウン -->
+          <p v-if="isCountDown" style="font-size: 100px; text-align: center">3</p>
+
+          <!-- <p class="p-question__japanese">りんごさん</p>
+          <p class="p-question__romaji">ringo</p>   -->
+        </div>
+  
+        <!-- 画面下の画像 -->
+        <img class="p-typing__image" src="img/typing-icon.svg" alt="タイピング画像">
+
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+      <span class="p-footer__title">©Nihongo Typing All Rights Reserved.</span>
+    </footer>
+  </div>
+  
+
+</body>
+
+</html>

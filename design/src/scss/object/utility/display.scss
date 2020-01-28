@@ -1,0 +1,11 @@
+.u-display {
+  &--block {
+    display: block;
+  }
+  &--none {
+    display: none;
+    @include mq(){
+      display:block;
+    }      
+  }
+}

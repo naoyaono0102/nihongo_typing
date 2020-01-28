@@ -1,0 +1,86 @@
+// タイピング問題一覧画面のプロジェクト
+.p-drills {
+  display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
+  @include mq(md){
+    display:block;
+  }
+}
+
+.p-drill {
+  // width: 380px;
+  // height: 230px;
+  background: #fff;
+  width: calc(50% - 20px);
+  padding: $space_l;
+  border: 3px solid #E5E5E5;
+  border-radius: 5px;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; // マイページ画面で削除・編集アイコンを乗せるため
+  transition: 0.4s;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,.2);
+    border: 2px solid #E5E5E5;
+    transform: translateY(-2px);
+    transition: 0.4s;
+ }
+  &:nth-child(2n) {
+    margin-right: 0;
+ }
+ @include mq(md){
+  width: 100%;
+}
+  &__title {
+    font-size: $font-size_xl;
+    margin-bottom: $space_xxl;
+    word-wrap: break-word;
+    line-height: 1.2;
+    @include mq(){
+      font-size: $font-size_l;
+      margin-bottom: $space_xl;
+    }
+  }
+  &__description {
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    @include mq(){
+      font-size: $font-size_m;
+      line-height: 1.4;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:5px;
+    padding-right:5px;
+  }
+}
+
+.p-creater {
+  display: flex;
+  align-items: center;
+  &__pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  &__username {
+    font-size: $font-size_m;
+  }
+}
+
+// 検索アイコン
+.p-icon__search {
+  color: #fff;
+}

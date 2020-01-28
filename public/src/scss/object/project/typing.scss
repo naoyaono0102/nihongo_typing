@@ -1,0 +1,47 @@
+// タイピング問題画面
+.p-typing {
+  min-height: calc(100vh - 150px); //ヘッダー：65px + フッター:32px + padding：60px - border:10px 
+  &__question {
+    border: 5px solid #E5E5E5;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 55px;
+    margin-bottom: 40px;
+    height: 260px;
+    padding: 30px;  
+    box-sizing: border-box;
+    @include mq(){
+      width: 100%;
+    }    
+  }
+  &__image {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+    @include mq(){
+      width: 45%;
+    }      
+  }
+}
+
+.p-question {
+  &__japanese {
+    text-align:center;
+    font-size: 56px;
+    font-family: "Noto Sans JP";
+    @include mq(){
+      margin-top: 30px;
+      font-size: 32px;
+    }      
+  }
+  &__romaji {
+    text-align:center;
+    font-size: 56px;
+    font-family: "Noto Sans JP";
+    letter-spacing: 10px;
+    @include mq(){
+      margin-top: 20px;
+      font-size: 32px;
+    }      
+  }
+}

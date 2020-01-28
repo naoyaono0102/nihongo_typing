@@ -1,0 +1,19 @@
+.p-icons {
+  display: flex;
+  // position: absolute;  
+  // bottom: 15px;
+  // right: 20px;
+  &__edit {
+    color: #78C800;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__delete {
+    color: #FF4A4B;
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+}

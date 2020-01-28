@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet"> 
+  <title>日本語タイピング</title>
+  <script src="https://kit.fontawesome.com/62be1f71ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="l-header">
+      <div class="p-header l-site-width">
+        <h1 class="p-header__logo">
+          <a class="p-logo" href="">Nihongo Typing</a>
+        </h1>
+
+        <div class="p-header__nav">
+          <nav class="p-nav">
+            <ul class="p-nav__list">
+              <li class="p-list"><a class="p-list__link" href="#">ログイン</a></li>
+              <li class="p-list u-ml--4l"><a class="p-list__link" href="#">新規登録</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div> <!-- p-header -->
+    </header>
+
+
+    <!-- メインエリア -->
+    <main class="l-justify-left l-list">
+
+      <!-- サイドバー（左）  -->
+      <div class="l-side-bar">
+        <div class="p-side-bar">
+
+          <!-- メニュー一覧 -->
+          <div class="p-side-bar__menu">
+            <ul class="p-menu">
+              <li class="p-menu__list"><a class="p-menu__link" href=""><i class="fas fa-home"></i> ホーム</a></li>
+              <li class="p-menu__list"><a class="p-menu__link" href=""><i class="fas fa-keyboard"></i> 作成したタイピング一覧</a></li>
+              <li class="p-menu__list"><a class="p-menu__link" href=""><i class="fas fa-broom"></i> 問題作成</a></li>
+              <li class="p-menu__list"><a class="p-menu__link" href=""><i class="fas fa-user-alt"></i> アカウント設定</a></li>
+            </ul>
+          </div>
+
+          <!-- 広告エリア -->
+          <div class="p-ad">
+            <div class="p-ad__square">
+              広告エリア
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- アカウントエリア -->
+      <div class="l-accounts">
+        <div class="p-accounts">
+
+          <!-- プロフィール -->
+          <div class="p-account">
+            <div class="p-account__title">
+              <i class="fas fa-user-alt p-icon__prof"></i>
+              <p>プロフィール編集</p>
+            </div>
+
+            <form action="" class="p-account__form" enctype="multipart/form-data">
+              <div class="p-prof u-mb--3l">
+
+                <!-- 画像 -->
+                <label class="p-prof__pic">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="3145728">
+                  <input type="file" name="pic" class="p-prof__pic--drop"> 
+                  <img src="img/person.png" alt="プロフィール画像" class="p-prof__pic--img">         
+                </label>
+
+                <!-- 名前・アドレス -->
+                <div class="p-prof__info">
+                  <label>
+                    <input class="c-input  u-mb--3l l-w100p" type="text" placeholder="ニックネーム">
+                  </label>
+                  <label>
+                    <input class="c-input l-w100p" type="text" placeholder="メールアドレス">
+                  </label>    
+                </div>
+              </div>
+
+              <input class="c-btn p-btn__login l-btn-width--m u-border--none" type="submit" value="変更する">
+            </form>
+           </div> 
+  
+          <!-- パスワード変更 -->          
+          <div class="p-account">
+            <div class="p-account__title">
+              <i class="fas fa-lock p-icon__pass"></i>
+              <p>パスワード変更</p>  
+            </div>
+
+            <form action="" class="p-account__form">
+              <label>
+                <input class="c-input u-mb--3l l-w100p" type="password" placeholder="古いパスワード">
+              </label>
+              <label>
+                <input class="c-input  u-mb--3l l-w100p" type="password" placeholder="新しいパスワード">
+              </label>
+              <label>
+                <input class="c-input  u-mb--3l l-w100p" type="password" placeholder="新しいパスワード（再入力）">
+              </label>
+              <input class="c-btn p-btn__login l-btn-width--m u-border--none" type="submit" value="変更する">
+            </form>
+          </div>
+
+
+          <!-- 退会手続き -->
+          <div class="p-account">
+            <div class="p-account__title">
+              <i class="fas fa-times-circle p-icon__withdraw"></i>
+              <p>退会手続き</p>
+            </div>
+
+            <form action="" class="p-account__form">         
+              <input class="c-btn p-btn__login l-btn-width--m u-border--none" type="submit" value="退会する">
+            </form>
+          </div>
+
+        </div> <!-- p-accounts -->
+      </div> <!-- l-accounts -->
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+      <span class="p-footer__title">©Nihongo Typing All Rights Reserved.</span>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script>
+		//画像のライブプレビュー
+    var $dropArea = $('.p-prof__pic'); //label
+    var $fileInput = $('.p-prof__pic--drop'); //file
+
+    //ドラッグしてきて、上に乗ったとき枠線を表示
+    $dropArea.on('dragover', function(e){
+      e.stopPropagation();
+      e.preventDefault();
+      $(this).css('border', '3px #ccc dashed');
+    });
+
+    //枠から離れたとき枠線消す
+    $dropArea.on('dragleave', function(e){
+      e.stopPropagation();
+      e.preventDefault();
+      $(this).css('border', 'none');
+    });
+
+		//内容が変更されたら（画像を置いたら）
+		$fileInput.on('change', function(e){
+			//1. 枠線を消す
+			$dropArea.css('border', 'none');
+
+      // 2. files配列にファイルが入ってくる
+      var file = this.files[0],   
+          $img = $(this).siblings('.p-prof__pic--img'), // 3. DOM取得
+          fileReader = new FileReader(); // 4. ファイルを読み込むFileReaderオブジェクト
+
+     // 5. 読み込みが完了した際のイベントハンドラ。imgのsrcにデータをセット
+     fileReader.onload = function(event) {
+       // 読み込んだデータをimgに設定
+       $img.attr('src', event.target.result).show();
+     };
+    // 6. 画像読み込み
+    fileReader.readAsDataURL(file);
+
+    });    
+    
+    </script>
+</body>
+
+</html>

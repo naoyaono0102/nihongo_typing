@@ -1,0 +1,96 @@
+// ****************************
+// * FADE
+// ****************************
+.fade-enter-active {
+  transition: all  0.1s;
+}
+
+.fade-leave-active {
+  transition: all  0.7s;
+}
+
+.fade-enter/* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  // transform: translateY(80px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  // transform: translatey(80px);
+}
+
+// ****************************
+// * モーダル表示
+// ****************************
+.bounce-enter-active {
+  animation: bounce-in 0.7s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// ****************************
+// * TOP画面
+// ****************************
+.p-main__title {
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// クイズ一覧
+.p-drill {
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ****************************
+// * TRANSION: LIST
+// ****************************
+.list-enter-active {
+  transition: all 1s;
+}
+
+.list-leave-active {
+  transition: all 1s;
+}
+
+.list-enter/* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(200px);
+}

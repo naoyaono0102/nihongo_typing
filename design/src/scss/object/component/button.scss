@@ -1,0 +1,14 @@
+.c-btn {
+  display: block;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 16px;
+  font-size: $font-size_xl;
+  color: #fff;
+  @include mq(){
+    font-size: $font-size_l;
+    height: 40px;
+    line-height: 40px;
+  }  
+}

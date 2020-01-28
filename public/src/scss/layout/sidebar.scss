@@ -1,0 +1,8 @@
+.l-side-bar {
+  min-width: 280px;
+  background: #fff;
+  border-right: 3px solid #E5E5E5;
+  @include mq(){
+    display: none;
+  }      
+}

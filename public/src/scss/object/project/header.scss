@@ -1,0 +1,36 @@
+.p-header {
+  display: flex;
+  justify-content: space-between;
+  line-height: 65px;
+  &__logo {
+    @include mq(){
+      width: 100%;
+      text-align: center;
+    }      
+  }
+}
+
+.p-logo {
+  font-size: $font-size_3l;
+  color : #fff;
+  margin-left: 20px;
+  @include mq(){
+    font-size: $font-size_xxl;
+  }      
+}
+
+.p-nav {
+  margin-right: 20px;
+  &__list {
+    display: flex;
+  }
+  @include mq(){
+    display: none;
+  }    
+}
+
+.p-list {
+  &__link {
+    color: #fff;
+  }
+}

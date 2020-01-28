@@ -1,0 +1,82 @@
+.p-account {
+  display: flex;
+  padding-bottom: $space_5l;  
+  @include mq(md){
+    display: block;
+  }      
+  &__title {
+    min-width: 200px;
+    text-align: center;  
+    @include mq(md){
+      margin-bottom: 30px;
+    }        
+  }
+  &__form {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+}
+
+.p-icon {
+  &__prof {
+    font-size: 64px;
+    margin-bottom: 10px;
+  }
+  &__pass {
+    font-size: 64px;
+    margin-bottom: 10px;
+  }
+  &__withdraw {
+    font-size: 64px;
+    margin-bottom: 10px;  
+  }
+}
+
+.p-prof {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @include mq(md){
+    display: block;
+  }      
+  &__pic {
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 50%;
+    background: #f6f5f5;
+    box-sizing: border-box;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;
+    @include mq(md){
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }        
+    &--drop{
+      opacity:0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      position:absolute;
+      outline:none;
+      top: 0;
+      left: 0;
+      z-index:2;
+      overflow: hidden;
+    }
+    &--img {
+      width: 100%;
+			position:absolute;
+			top:0;
+      left:0;
+    }
+  }
+  &__info {
+    width: 100%;
+  }
+}

@@ -1,0 +1,51 @@
+.p-modal {
+  padding: 20px 70px;
+  position: relative;
+  &__title {
+    font-size: $font-size_xl;
+    @include mq(){
+      font-size: $font-size_l;
+    }    
+  }
+  &__close {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #B1B1B1;
+    box-sizing: border-box;
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    &:hover {
+      cursor: pointer;
+    }
+    @include mq(){
+      width: 40px;
+      height: 40px;
+      top: -15px;
+      right: -10px;  
+    }    
+  }
+  @include mq(){
+    padding: 15px 50px;
+  }  
+}
+
+.p-link {
+  width: 100%;
+  text-align: center;
+}
+
+.p-btn__close {
+  color: #B1B1B1;
+  font-size: $font-size_3l;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  @include mq(){
+    font-size: $font-size_xxl;
+    top: -9px;
+    left: 7px;  
+  }  
+}

@@ -1,0 +1,21 @@
+// 広告の調整
+.p-ad {
+  &__long {
+    width: 140px;
+    height: 300px;
+    background: #E5E3E3;
+    margin: 0 auto;
+  }
+  &__square {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background: #E5E3E3;
+  }
+  &__yokonaga {
+    width: 728px;
+    height: 90px;
+    margin: 0 auto;
+    background: #E5E3E3;
+  }
+}

@@ -1,0 +1,82 @@
+html, body {
+  width: 100%;
+  color: $font-color_default;
+  font-size: $font-size_default;
+  line-height: 1.6;
+  font-family: 'nikumaru', Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; 
+  text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+}
+
+p, a {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $font-color_default;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: $color_corp;
+  transition: .3s;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+label {
+  display: block;
+  font-size: $font-size_l
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email']
+{
+  display: block;
+  outline: none;
+  font-size:$font-size_default;
+  padding: $space_m;
+  box-sizing: border-box;
+}
+
+input[type='submit']{
+  display: block;
+  outline: none;
+  padding: 0;
+  // font-size:$font-size_xl;
+  font-family: 'nikumaru', Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: 'nikumaru', Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  margin: 0 auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+select {
+  display: block;
+  outline: none;
+  background: #fff;
+  font-size:$font-size_default;
+  padding: $space_m;
+  box-sizing: border-box;
+}
+
+// ウェブフォント
+@font-face {
+  font-family: 'nikumaru';
+  src: url('../fonts/07にくまるフォント.otf') format('opentype');
+  }

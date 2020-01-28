@@ -1,0 +1,40 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  
+  // 本番でも使うもの
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "lodash": "^4.17.4",
+    "vue": "^2.5.11"
+  },
+  // 開発時のみに使うもの
+  "devDependencies": {
+    "babel": "^6.23.0", // ES6で書くためのもの
+    "babel-core": "^6.26.0", // ES6で書くためのもの
+    "babel-loader": "7.1.1", // ES6で書くためのもの
+    "babel-preset-es2015": "^6.24.1", // ES6で書くためのもの
+    "babel-preset-react": "^6.24.1", // reactでES6で書くためのもの
+    "browser-sync": "^2.18.13", //ソースコードファイルを監視し、自動でブラウザをリロードしてくれる
+    "browserify": "^14.5.0", //jsを１つにまとめるもの
+    "classnames": "^2.2.5", // Reactで使用。classを条件によって変更する
+    "gulp": "^3.9.1", //タスクランナーを実装するためのもの
+    "gulp-notify": "^3.0.0", // gulpタスクがエラーになった時に通知してくれる
+    "gulp-plumber": "^1.1.0", // gulpタスクがエラーになっても止まらずに実行してくれる
+    "gulp-webpack": "^1.5.0", // webpackをgulpで使う
+    "vinyl-source-stream": "^1.1.0", 
+    "webpack": "^3.9.1", //browserifyよりも高機能なもの。js、cssを１つにまとめる
+    "webpack-stream": "^4.0.0", // エラーになっても止まらずに実行してくれる？
+    "vue-devtools": "^3.1.9", //Vue.jsの開発ツール
+    "eslint": "^4.12.1" //jsの構文チェック
+  }
+}

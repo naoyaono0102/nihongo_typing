@@ -1,0 +1,57 @@
+// トップ画面のメインエリア
+.l-main {
+  padding-left: $space_l;
+  padding-right: $space_l;
+}
+
+// 記事一覧のメインエリア
+.l-list{
+   background: $bg-color_main;
+   height: auto;
+}
+
+.l-drills {
+  padding: 40px 40px 40px 40px;
+  // height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  @include mq(){
+  width: auto;
+  }
+}
+
+// タイピング画面のメインエリア
+.l-typing {
+  padding-left: $space_l;
+  padding-right: $space_l;
+}
+
+// タイピング作成画面のメインエリア
+.l-makeQuiz {
+  padding: 40px 40px 0 40px;
+  background: $bg-color_main;
+  @include mq(){
+    padding: 20px 20px 0 20px;
+  }
+  &__wrap {
+    width: 50%;
+    @include mq(){
+      width: 100%;
+    }
+  }
+}
+
+// アカウント設定のメインエリア
+.l-accounts {
+  width: 100%;
+  padding: 40px 40px 0 0;
+  box-sizing: border-box;
+  @include mq(md){
+    padding: 40px 15px 0 15px;
+  }
+}
+
+// 結果画面
+.l-result {
+  padding: 40px 0 25px 0;
+}

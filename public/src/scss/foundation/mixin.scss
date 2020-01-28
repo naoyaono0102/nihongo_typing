@@ -1,0 +1,26 @@
+// マップ型変数を使うと便利
+$breakpoints: (
+  'sm': 'screen and (max-width: 576px)',   //スマホ
+  'md': 'screen and (max-width: 768px)',   //タブレット
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+// ==============================
+// mixin
+// ==============================
+// @mixinは関数のようなものを作れる
+// https://www.webcreatorbox.com/tech/sass-mixin
+// map-get()の第一引数に変数名、第二引数にマップ型のキーを渡すと、マップ型の値が返る
+// #{}は「インターポーレーション」といって、演算できない箇所、変数使えない箇所でも使えるようにするものcalcなどでよく使う
+// http://book.scss.jp/code/c4/08.html
+// 書き方---------
+//@include mq(){
+//  font-size: $font-size_m;
+//}  
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

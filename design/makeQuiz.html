@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/app.css">
+  <title>日本語タイピング</title>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/62be1f71ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="l-header">
+    <div class="p-header l-site-width">
+      <h1 class="p-header__logo">
+        <a class="p-logo" href="">Nihongo Typing</a></<a>
+      </h1>
+
+      <div class="p-header__nav">
+        <nav class="p-nav">
+          <ul class="p-nav__list">
+            <li class="p-list"><a class="p-list__link" href="#">ログイン</a></li>
+            <li class="p-list u-ml--4l"><a class="p-list__link" href="#">新規登録</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div> <!-- p-header -->
+  </header>
+
+  <!-- メイン -->
+  <main class="l-makeQuiz">
+    <div class="l-site-width l-makeQuiz__wrap">
+      <div classs="p-makeQuiz">
+        <h2 class="p-makeQuiz__title">タイピング問題登録</h2>
+
+        <form action="" class="p-regist u-pb--3l">
+
+          <!-- 共通部分 -->
+          <label class="p-regist__label">
+            タイトル
+            <input class="c-input p-regist__title" type="text" name="title">
+          </label>
+
+          <div class="l-justify-between p-regist__label">
+            <label class="l-w50p u-mr--3l">
+              カテゴリー
+              <select class="c-select p-regist__category" name="category">
+                <option value="">MINNANO NIHONGO</option>
+              </select>
+            </label>
+
+            <label class="l-w50p">
+              公開区分
+              <select class="c-select p-regist__published-flg" name="category">
+                <option value="">公開</option>
+                <option value="">非公開</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- 問題グループ -->
+          <div class="p-makeQuiz__question">
+            <span>問題１<span>
+            <div class="p-questions l-justify-between l-align-end">
+              <label class="l-w50p u-mr--3l">
+                <input class="p-questions__japanese" type="text" name="japanese0">
+                <span class="u-ml--m">日本語</span>
+              </label>
+
+              <label class="l-w50p">
+                <input class="p-questions__romaji" type="text" name="romaji0">
+                <span class="u-ml--m">ローマ字</span>
+              </label>
+
+              <!-- 削除ボタン（ゴミ箱） -->
+              <i class="fas fa-trash-alt p-icon__delete"></i>
+            </div>
+          </div>
+
+            <div class="p-makeQuiz__question">
+              <span>問題２<span>
+                  <div class="p-questions l-justify-between l-align-end">
+                    <label class="l-w50p u-mr--3l">
+                      <input class="p-questions__japanese" type="text" name="japanese0">
+                      <span class="u-ml--m">日本語</span>
+                    </label>
+  
+                    <label class="l-w50p">
+                      <input class="p-questions__romaji" type="text" name="romaji0">
+                      <span class="u-ml--m">ローマ字</span>
+                    </label>
+                  </div>
+              </div>
+
+              <div class="p-makeQuiz__question">
+                <span>問題３<span>
+                    <div class="p-questions l-justify-between l-align-end">
+                      <label class="l-w50p u-mr--3l">
+                        <input class="p-questions__japanese" type="text" name="japanese0">
+                        <span class="u-ml--m">日本語</span>
+                      </label>
+    
+                      <label class="l-w50p">
+                        <input class="p-questions__romaji" type="text" name="romaji0">
+                        <span class="u-ml--m">ローマ字</span>
+                      </label>
+
+                    </div>
+                </div>
+  
+                <p class="p-makeQuiz__btn--add">+ 問題の追加</p>
+
+          <!-- ボタン -->
+          <div class="l-justify-between">
+            <a class="c-btn p-btn__negative l-btn-width--m u-mb--xl" href="">戻る</a>
+            <input class="c-btn p-btn__login l-btn-width--m u-border--none" type="submit" value="登録">
+          </div>
+
+        </form>
+
+      </div> <!-- p-makeQuiz -->
+    </div> <!-- l-site-width -->
+  </main>
+
+  <!-- フッター -->
+  <footer class="l-footer">
+    <span class="p-footer__title">©Nihongo Typing All Rights Reserved.</span>
+  </footer>
+
+</body>
+
+</html>

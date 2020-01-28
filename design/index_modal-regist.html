@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/app.css">
+  <title>日本語タイピング</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="l-h100vh">
+      <!-- ヘッダー -->
+      <header class="l-header">
+        <div class="p-header l-site-width">
+          <h1 class="p-header__logo">
+            <a class="p-logo" href="">Nihongo Typing</a>
+          </h1>
+
+          <div class="p-header__nav">
+            <nav class="p-nav">
+              <ul class="p-nav__list">
+                <li class="p-list"><a v-on:click='showLoginModal' class="p-list__link" href="#">ログイン</a></li>
+                <li class="p-list u-ml--4l"><a v-on:click='showSingupModal' class="p-list__link" href="#">新規登録</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div> <!-- p-header -->
+
+      </header>
+
+      <!-- メイン -->
+      <main class="l-main l-site-width">
+        <div class="p-main l-justify-align-center">
+          <img class="p-main__image" src="img/typing-icon.svg" alt="トップ画像">
+
+          <transition name="fade">
+            <div class="p-main__title">
+              <h2 class="p-title">無料で楽しくタイピング練習</h2>
+              <div class="p-btn">
+                <a class="c-btn p-btn__list l-btn-width-l u-mb--l" href="">Try Typing Game</a>
+                <a class="c-btn p-btn__login l-btn-width-l" href="">Make Typing Quiz</a>
+              </div>
+            </div>
+          </transition>
+        </div>
+
+        <!-- モーダル （テスト） -->
+        <transition name="bounce">
+        <div class="l-modal" v-show="showLogin" v-on:click='closeModal'>
+            <div class="p-modal" v-on:click="stopEvent">
+              <h2 class="p-modal__title u-mb--3l">ログイン</h2>
+
+              <form action="" class="u-mb--3l">
+                <label class="u-mb--3l">
+                  <input class="c-input l-w100p u-color--input" type="email" placeholder="メールアドレス">
+                  <div class="c-msg--error">エラーです</div>
+                </label>
+  
+                <label class="u-mb--3l">
+                  <input class="c-input l-w100p u-color--input" type="password" placeholder="パスワード">
+                  <div class="alert alert-danger">エラーです</div>
+                </label>
+                <input class="c-btn p-btn__login l-w100p u-border--none" type="submit" value="ログイン">
+              </form>
+
+            <!-- <div class="u-border--bottom u-mb--3l"></div> -->
+            <div class="p-link"><a class="p-link__signup" href="">会員登録はこちら</a></div> 
+  
+              <!-- 閉じるボタン -->
+              <div class="p-modal__close"><span v-on:click='closeModal' class="p-btn__close">×</span></div>
+            </div>
+            
+
+        </div>
+        </transition>    
+        <!-- モーダル （テスト） -->
+
+      </main>
+
+      <!-- ログインモーダル -->
+      <!-- <transition name="fade">
+        <div class="l-modal" v-show="showLogin">
+          <div class="p-modal">
+            <h2 class="p-modal__title u-mb--3l">ログイン</h2>
+            <form action="">
+              <label class="u-mb--3l">
+                <input class="c-input l-w100p u-color--input" type="email" placeholder="メールアドレス">
+                <div class="c-msg--error">エラーです</div>
+              </label>
+
+              <label class="u-mb--3l">
+                <input class="c-input l-w100p u-color--input" type="password" placeholder="パスワード">
+                <div class="alert alert-danger">エラーです</div>
+              </label>
+              <input class="c-btn p-btn__login l-w100p u-border--none" type="submit" value="ログイン">
+            </form> -->
+
+            <!-- 閉じるボタン -->
+            <!-- <div class="p-modal__close"><span v-on:click='closeModal' class="p-btn__close">×</span></div> -->
+
+          <!-- </div> -->
+           <!-- p-modal  -->
+          <!-- <div class="u-border--bottom u-mb--3l"></div>
+      <div class="p-link"><a class="p-link__signup" href="">会員登録はこちら</a></div> -->
+        <!-- </div>
+
+      </transition> -->
+
+      <!-- モーダル用背景 -->
+      <transition name="fade">
+      <div class="l-modal__bg" v-on:click='closeModal' v-if="showModalBg"></div>
+      </transition>
+
+      <!-- フッター -->
+      <footer class="l-footer">
+        <span class="p-footer__title">©Nihongo Typing All Rights Reserved.</span>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        showLogin: false, //ログインモーダル表示
+        showSignup: false, //新規登録モーダル表示
+        showDelete: false, //削除モーダル表示
+        showSearch: false, //検索モーダル表示
+        showModalBg: false, //モーダル背景色
+        name: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
+        errors: {},
+        duestionsList: []  // タイピング問題の入力フォーム 
+      },
+      methods: {
+        showLoginModal: function () {
+          this.showLogin = true
+          this.showModalBg = true
+        },
+        closeModal: function () {
+          this.showLogin = false
+          this.showSignup = false
+          this.showDelete = false
+          this.showSearch = false
+          this.showModalBg = false
+        },
+        showSingupModal: function () {
+          this.showSignup = true
+          this.showModalBg = true
+        },
+        showDeleteModal: function () {
+          this.showDelete = true
+          this.showModalBg = true
+        },
+        showSearchModal: function () {
+          this.showSearch = true
+          this.showModalBg = true
+        },
+        stopEvent: function(){
+          event.stopPropagation()
+        },
+        login: function () {
+          this.errors = {};
+
+          var self = this;
+          var url = '/login';
+          var params = {
+            email: this.email,
+            password: this.password
+          };
+
+          // Ajax通信
+          axios.post(url, params)
+            .then(function (response) {
+              // ログイン成功
+              location.href = '/mypage';
+
+            })
+            .catch(function (error) {
+              // ログイン失敗    
+              var responseErrors = error.response.data.errors;
+              var errors = {};
+
+              for (var key in responseErrors) {
+                errors[key] = responseErrors[key][0];
+              }
+
+              self.errors = errors;
+
+            });
+        },
+        signup: function () {
+          this.errors = {};
+
+          var self = this;
+          var url = '/register';
+          var params = {
+            name: this.name,
+            email: this.email,
+            password: this.password,
+            password_confirmation: this.password_confirmation
+          };
+
+          // Ajax通信
+          axios.post(url, params)
+            .then(function (response) {
+              // 新規登録成功
+              location.href = '/mypage';
+
+            })
+            .catch(function (error) {
+              // 新規登録失敗    
+              var responseErrors = error.response.data.errors;
+              var errors = {};
+
+              for (var key in responseErrors) {
+                errors[key] = responseErrors[key][0];
+              }
+
+              self.errors = errors;
+
+            });
+        }
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>

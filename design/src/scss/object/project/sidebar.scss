@@ -1,0 +1,32 @@
+// タイピング一覧の検索エリア
+.p-search {
+  &__title {
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  &__category {
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+  }
+  &__submit {    
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+    // border: 3px solid #E5E5E5;
+    // font-size: $font-size_xl;
+  }
+}
+
+
+// マイページのメニュー一覧
+.p-menu {
+  padding-top: 50px;
+  padding-left: 15px;
+  &__list {
+    margin-bottom: $space_xxl;
+    font-size: $font-size_l;
+  }
+}
